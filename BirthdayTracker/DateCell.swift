@@ -15,4 +15,5 @@ class DateCell: UITableViewCell {
     
     @IBOutlet weak var ageLabel: UILabel!
     
+    @IBOutlet weak var birthDateLabel: UILabel!
 }

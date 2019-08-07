@@ -13,11 +13,14 @@ class DatesViewController: UIViewController, FUIAuthDelegate, UITableViewDataSou
     
     private var handler: AuthStateDidChangeListenerHandle?
     private var documentSnapshot: [DocumentSnapshot] = []
+    private let dateFormatter = DateFormatter()
     
     @IBOutlet weak var tableView: UITableView!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        dateFormatter.dateStyle = .short
         
         guard let authUI = FUIAuth.defaultAuthUI() else {
             return //TODO: Log Error!
@@ -106,6 +109,12 @@ class DatesViewController: UIViewController, FUIAuthDelegate, UITableViewDataSou
         } else {
             cell.ageLabel.text = ""
         }
+        
+        guard let birthday = data["birthday"] as? Timestamp else {
+            return cell
+        }
+        
+        cell.birthDateLabel.text = dateFormatter.string(from: birthday.dateValue())
         
         return cell
     }
