@@ -93,7 +93,16 @@ class DatesViewController: UIViewController, FUIAuthDelegate, UITableViewDataSou
         
         if let birthday = data["birthday"] as? Timestamp,
             let diffInyears = Calendar.current.dateComponents([.year], from: birthday.dateValue(), to: Date()).year {
-            cell.ageLabel.text = "Age: " + String(diffInyears)
+            
+            if(diffInyears < 1) {
+                if let diffInMonths = Calendar.current.dateComponents([.month], from: birthday.dateValue(), to: Date()).month {
+                    cell.ageLabel.text = String(diffInMonths) + " Months"
+                } else {
+                    cell.ageLabel.text = "0"
+                }
+            } else {
+                cell.ageLabel.text = String(diffInyears)
+            }
         } else {
             cell.ageLabel.text = ""
         }

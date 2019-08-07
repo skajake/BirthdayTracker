@@ -22,37 +22,46 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="411"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DateCell" rowHeight="72" id="606-zm-Toh" customClass="DateCell" customModule="BirthdayTracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="72"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DateCell" rowHeight="105" id="606-zm-Toh" customClass="DateCell" customModule="BirthdayTracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="105"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="606-zm-Toh" id="3Rr-GO-iDf">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="71.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="104.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vom-ic-7fx">
-                                                    <rect key="frame" x="35" y="21" width="42" height="30"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frank Luntz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vom-ic-7fx">
+                                                    <rect key="frame" x="35" y="18" width="91" height="27"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="llp-FZ-ZKa">
-                                                    <rect key="frame" x="139" y="21" width="42" height="30"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="llp-FZ-ZKa">
+                                                    <rect key="frame" x="35" y="60.5" width="35" height="26.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="45" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8lV-lC-kkj">
+                                                    <rect key="frame" x="78" y="60.5" width="21" height="26.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="llp-FZ-ZKa" firstAttribute="leading" secondItem="3Rr-GO-iDf" secondAttribute="leadingMargin" constant="124" id="DWd-en-Mfr"/>
-                                                <constraint firstItem="llp-FZ-ZKa" firstAttribute="top" secondItem="vom-ic-7fx" secondAttribute="top" id="Jt4-1i-HCc"/>
+                                                <constraint firstItem="8lV-lC-kkj" firstAttribute="bottom" secondItem="llp-FZ-ZKa" secondAttribute="bottom" id="2Ey-oX-GtD"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="llp-FZ-ZKa" secondAttribute="bottom" constant="7" id="Bmb-Vp-MGV"/>
+                                                <constraint firstItem="8lV-lC-kkj" firstAttribute="leading" secondItem="llp-FZ-ZKa" secondAttribute="trailing" constant="8" id="GHR-5D-tHj"/>
+                                                <constraint firstItem="llp-FZ-ZKa" firstAttribute="top" secondItem="vom-ic-7fx" secondAttribute="bottom" constant="15.5" id="KHz-Nr-KJr"/>
                                                 <constraint firstItem="llp-FZ-ZKa" firstAttribute="height" secondItem="vom-ic-7fx" secondAttribute="height" id="Oa7-Ji-vO0"/>
-                                                <constraint firstItem="vom-ic-7fx" firstAttribute="top" secondItem="3Rr-GO-iDf" secondAttribute="topMargin" constant="10" id="P3N-q5-5l4"/>
+                                                <constraint firstItem="llp-FZ-ZKa" firstAttribute="leading" secondItem="vom-ic-7fx" secondAttribute="leading" id="QMw-bG-Ci9"/>
+                                                <constraint firstItem="8lV-lC-kkj" firstAttribute="height" secondItem="llp-FZ-ZKa" secondAttribute="height" id="Zw7-J7-rsv"/>
                                                 <constraint firstItem="vom-ic-7fx" firstAttribute="leading" secondItem="3Rr-GO-iDf" secondAttribute="leadingMargin" constant="20" id="cbK-w1-UEL"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="vom-ic-7fx" secondAttribute="bottom" constant="10" id="oFo-pe-xmw"/>
+                                                <constraint firstItem="vom-ic-7fx" firstAttribute="top" secondItem="3Rr-GO-iDf" secondAttribute="topMargin" constant="7" id="jm4-3b-Olh"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="ageLabel" destination="llp-FZ-ZKa" id="R5f-Zb-eTG"/>
+                                            <outlet property="ageLabel" destination="8lV-lC-kkj" id="y7k-pA-F0J"/>
                                             <outlet property="nameLabel" destination="vom-ic-7fx" id="dZE-gn-sXv"/>
                                         </connections>
                                     </tableViewCell>
